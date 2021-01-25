@@ -1,0 +1,18 @@
+<header>
+  <a class="add-sign" (click)="onAddNote()">+</a>
+  <a (click)="onRemoveNote()">
+    <img class="trash-can" src="../../assets/dump.svg" alt="trash can" />
+  </a>
+</header>
+<div *ngFor="let notes of allNotes; let i = index">
+  <div>
+    <!-- [ngStyle]="{ 'background-color': 'blue' }" -->
+    <a
+      class="list"
+      (click)="onEditNote(i)"
+      [style.background-color]="i == selected ? '#9ba4b4' : '#394867'"
+    >
+      {{ notes | list: 115 }}</a
+    >
+  </div>
+</div>

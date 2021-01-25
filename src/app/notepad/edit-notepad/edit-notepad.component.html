@@ -1,0 +1,14 @@
+<div class="container">
+  <!-- ng-model="$parent.noticeText" -->
+  <textarea
+    [(ngModel)]="noteBeingEdited"
+    id="notepad"
+    cols="30"
+    rows="10"
+    (keyup)="onKeyUp(beingEdited, noteBeingEdited)"
+  ></textarea>
+</div>
+
+<!-- <div class="container" *ngFor="let notes of allNotes; let i = index">
+  <div>{{allNotes[0]}}</div>
+</div> -->
