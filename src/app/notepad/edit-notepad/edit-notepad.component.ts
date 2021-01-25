@@ -16,7 +16,6 @@ export class EditNotepadComponent implements OnInit {
 
   constructor(
     private notepadService: NotepadService) {
-    // this.allNotes = this.notepadService.allNotes
   }
 
   ngOnInit(): void {
@@ -26,14 +25,14 @@ export class EditNotepadComponent implements OnInit {
         this.beingEdited = index
         this.noteBeingEdited = this.allNotes[this.beingEdited]
         this.allNotes = this.notepadService.allNotes
-        // console.log(this.noteBeingEdited)
       })
   }
 
   onKeyUp(index: number, newNote: string) {
     this.notepadService.onUpdateNote(index, newNote)
   }
-  // ngOnDestroy() {
-  //   this.subscription.unsubscribe()
-  // }
+
+  onAddNote() {
+    this.notepadService.addNote('')
+  }
 }

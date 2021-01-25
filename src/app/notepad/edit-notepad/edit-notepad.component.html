@@ -1,14 +1,14 @@
-<div class="container">
-  <!-- ng-model="$parent.noticeText" -->
+<div class="container" *ngIf="allNotes.length > 0">
   <textarea
     [(ngModel)]="noteBeingEdited"
     id="notepad"
     cols="30"
     rows="10"
+    placeholder="Whats on your mind?"
     (keyup)="onKeyUp(beingEdited, noteBeingEdited)"
   ></textarea>
 </div>
-
-<!-- <div class="container" *ngFor="let notes of allNotes; let i = index">
-  <div>{{allNotes[0]}}</div>
-</div> -->
+<div class="empty-container" *ngIf="allNotes.length <= 0">
+  <h3>Whats on your mind?</h3>
+  <button mat-raised-button (click)="onAddNote()">ADD NOTE</button>
+</div>

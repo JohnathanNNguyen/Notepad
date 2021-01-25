@@ -6,7 +6,6 @@
 </header>
 <div *ngFor="let notes of allNotes; let i = index">
   <div>
-    <!-- [ngStyle]="{ 'background-color': 'blue' }" -->
     <a
       class="list"
       (click)="onEditNote(i)"
