@@ -9,8 +9,7 @@ export class NotepadService {
   updateNotes = new Subject<[]>();
   startEdit = new Subject<number>();
   beingEdited: number = 0;
-  allNotes: any = ['This is a default note',
-    'This is default note 2 This is default note 2 This is default note 2 This is default note 2 This is default note 2 This is default note 2 This is default note 2 This is default note 2 This is default note 2 '];
+  allNotes: any = [];
 
 
 
